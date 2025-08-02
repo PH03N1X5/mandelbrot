@@ -1,0 +1,11 @@
+Mandelbrot generator and explorer
+
+Build
+- make
+Run
+- ./fractal
+
+References:
+- https://en.wikipedia.org/wiki/Julia_set?useskin=vector
+- https://www.karlsims.com/julia.html
+- https://acko.net/blog/how-to-fold-a-julia-fractal/

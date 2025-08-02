@@ -1,0 +1,29 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+#include<complex.h>
+
+#define STEP 0.05
+#define X0 1.5
+#define X1 1.1
+#define Y 1.0
+
+int main()
+{
+	for(float j = -Y; j <= Y; j += STEP, puts(""))
+		for(float i = -X0; i <= X1 ; i += STEP )
+		{
+			complex float c = i + I * j ;
+			complex float z = 0;
+			for(int k = 0; k < 1e3; ++k)
+				z = z*z + c;
+			if( crealf(z) < 1e4 && cimagf(z) < 1e4 )
+				printf("%c ", '#' );
+			else 
+				printf("%c ", ' ');
+
+		}
+
+	return 0;
+}
+
