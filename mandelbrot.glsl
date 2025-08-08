@@ -46,6 +46,7 @@ vec3 hsv2rgb(vec3 c)
 void main()
 {
     vec2 c = vec2(fragTexCoord.x, fragTexCoord.y);
+    // vec2 c = vec2(0, 0);
     c -= 0.5; //T
     c *= s;   //S
     c += 0.5; //T
@@ -62,7 +63,7 @@ void main()
     for (iter = 0; iter < iterations && dot(z,z)<4; ++iter)
     {
         z = cpow2(z) + c;
-        // z = cpow(z, 3) + 1;
+        // z = cpow(z, 3) + c;
     }
 
     float x = iter + 1 - log(log(length(z))/log(2.0));

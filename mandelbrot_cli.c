@@ -15,9 +15,10 @@ int main()
 		{
 			complex float c = i + I * j ;
 			complex float z = 0;
-			for(int k = 0; k < 1e3; ++k)
+			int iter;
+			for(iter = 0; iter < 128 && creal(z) + cimag(z) < 4 ; ++iter)
 				z = z*z + c;
-			if( crealf(z) < 1e4 && cimagf(z) < 1e4 )
+			if( crealf(z) < 2 && cimagf(z) < 2 )
 				printf("%c ", '#' );
 			else 
 				printf("%c ", ' ');

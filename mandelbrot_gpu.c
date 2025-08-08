@@ -29,11 +29,11 @@ int main()
 		if (help_max < c) help_max = c;
 	}
 
-	const int WIDTH = 1000;
+	const int WIDTH = 900;
 	const int HEIGHT = 600;
 	const float MAGIC = 300.0;
-	InitWindow(WIDTH, HEIGHT, "Mandelbrot Set");
 
+	InitWindow(WIDTH, HEIGHT, "Mandelbrot Set");
 	Shader shader = LoadShader(0, "mandelbrot.glsl");
 	RenderTexture2D target = LoadRenderTexture(GetScreenWidth(), GetScreenHeight());
 
